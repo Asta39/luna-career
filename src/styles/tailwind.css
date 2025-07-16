@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #ffffff; /* white */
+    --color-foreground: #1a1a1a; /* gray-900 */
+    --color-border: #e5e7eb; /* gray-200 */
+    --color-input: #ffffff; /* white */
+    --color-ring: #1a4d3a; /* custom-forest-green */
+    
+    /* Card Colors */
+    --color-card: #ffffff; /* white */
+    --color-card-foreground: #1a1a1a; /* gray-900 */
+    
+    /* Popover Colors */
+    --color-popover: #ffffff; /* white */
+    --color-popover-foreground: #1a1a1a; /* gray-900 */
+    
+    /* Muted Colors */
+    --color-muted: #f8faf9; /* custom-surface */
+    --color-muted-foreground: #666666; /* gray-500 */
+    
+    /* Brand Colors */
+    --color-primary: #1a4d3a; /* custom-forest-green */
+    --color-primary-foreground: #ffffff; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #2d6b4f; /* custom-secondary-green */
+    --color-secondary-foreground: #ffffff; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #4a9d6b; /* custom-accent-green */
+    --color-accent-foreground: #ffffff; /* white */
+    
+    /* State Colors */
+    --color-destructive: #ef4444; /* red-500 */
+    --color-destructive-foreground: #ffffff; /* white */
+    
+    --color-success: #22c55e; /* green-500 */
+    --color-success-foreground: #ffffff; /* white */
+    
+    --color-warning: #f59e0b; /* amber-500 */
+    --color-warning-foreground: #ffffff; /* white */
+    
+    --color-error: #ef4444; /* red-500 */
+    --color-error-foreground: #ffffff; /* white */
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .shadow-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transition-smooth {
+    transition: all 200ms ease-in-out;
+  }
+  
+  .transition-success {
+    transition: all 300ms ease-in-out;
+  }
+}
