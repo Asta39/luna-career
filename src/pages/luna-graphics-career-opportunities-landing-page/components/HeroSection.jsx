@@ -19,7 +19,7 @@ const HeroSection = ({ onViewPositions, onLearnMore }) => {
             {/* Trust Badge */}
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <Icon name="Clock" size={16} color="white" className="mr-2" />
-              <span className="text-white text-sm font-medium">Now Hiring - 6 Positions Available</span>
+              <span className="text-white text-sm font-medium">Now Hiring</span>
             </div>
 
             {/* Main Headline */}
@@ -49,23 +49,14 @@ const HeroSection = ({ onViewPositions, onLearnMore }) => {
               >
                 View Open Positions
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white/10 font-semibold px-8 py-4"
-                iconName="Info"
-                iconPosition="left"
-                onClick={onLearnMore}
-              >
-                Learn About Luna Graphics
-              </Button>
+
             </div>
 
             {/* Trust Elements */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-8 mt-12 text-white/80">
               <div className="flex items-center">
                 <Icon name="Calendar" size={20} color="white" className="mr-2" />
-                <span className="text-sm">Established 2015</span>
+                <span className="text-sm">Lead corporate services</span>
               </div>
               <div className="flex items-center">
                 <Icon name="Users" size={20} color="white" className="mr-2" />

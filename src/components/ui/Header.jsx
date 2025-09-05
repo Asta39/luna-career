@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
 
+// Step 1: REMOVE the import statement for the logo. It's not needed for files in the 'public' directory.
+// import companyLogo from '../../assets/luna-logo2.png'; 
+
 const Header = ({ onGeneralApply }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -24,9 +27,13 @@ const Header = ({ onGeneralApply }) => {
             className="flex items-center space-x-2 hover:opacity-80 transition-smooth"
             onClick={closeMobileMenu}
           >
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Icon name="Printer" size={20} color="white" />
-            </div>
+            {/* Step 2: Use a direct path string to the logo in the 'public' folder */}
+            <img 
+              src="/assets/luna-logo2.png" 
+              alt="Luna Graphics Logo" 
+              className="w-8 h-8" 
+            />
+
             <div className="flex flex-col">
               <span className="font-inter font-bold text-lg text-foreground leading-tight">
                 Luna Graphics

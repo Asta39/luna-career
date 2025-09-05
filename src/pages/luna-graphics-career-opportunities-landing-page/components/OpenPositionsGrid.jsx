@@ -12,7 +12,7 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
       icon: "Palette",
       experience: "2-4 years",
       type: "Full-time",
-      deadline: "2025-08-15",
+      deadline: "2028-08-15",
       responsibilities: [
         "Create visual concepts and designs for print materials",
         "Collaborate with clients to understand design requirements",
@@ -30,7 +30,7 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
       icon: "GraduationCap",
       experience: "0-1 years",
       type: "Internship",
-      deadline: "2025-08-10",
+      deadline: "2028-08-10",
       responsibilities: [
         "Assist senior designers with project development",
         "Learn printing processes and quality standards",
@@ -48,7 +48,7 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
       icon: "Phone",
       experience: "1-2 years",
       type: "Full-time",
-      deadline: "2025-08-20",
+      deadline: "2028-08-20",
       responsibilities: [
         "Manage front desk operations and client reception",
         "Handle phone calls and appointment scheduling",
@@ -66,7 +66,7 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
       icon: "TrendingUp",
       experience: "2-3 years",
       type: "Full-time",
-      deadline: "2025-08-25",
+      deadline: "2028-08-25",
       responsibilities: [
         "Develop new client relationships and maintain existing ones",
         "Present printing solutions to potential customers",
@@ -84,7 +84,7 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
       icon: "Settings",
       experience: "1-3 years",
       type: "Full-time",
-      deadline: "2025-08-18",
+      deadline: "2028-08-18",
       responsibilities: [
         "Operate and maintain printing equipment",
         "Ensure quality control throughout production",
@@ -102,7 +102,7 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
       icon: "Smartphone",
       experience: "2-4 years",
       type: "Full-time",
-      deadline: "2025-08-22",
+      deadline: "2028-08-22",
       responsibilities: [
         "Manage social media accounts and online presence",
         "Create digital marketing campaigns",
@@ -226,20 +226,32 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">
-            Don't see the perfect role? We're always looking for talented individuals.
-          </p>
-          <Button
-            variant="outline"
-            iconName="Mail"
-            iconPosition="left"
-            onClick={() => window.location.href = 'mailto:careers@lunagraphics.co.ke'}
-          >
-            Send Us Your CV
-          </Button>
-        </div>
+       {/* Bottom CTA */}
+<div className="text-center mt-12">
+  <p className="text-muted-foreground mb-4">
+    Don't see the perfect role? We're always looking for talented individuals.
+  </p>
+  <Button
+    variant="outline"
+    iconName="Mail"
+    iconPosition="left"
+    onClick={() => {
+      // 1. Define the subject and body for the email
+      const subject = "Spontaneous Application - CV Submission";
+      const body = "Hello Luna Graphics Team,\n\nI am writing to express my interest in a potential role at your company. Please find my CV attached for your consideration.\n\nI look forward to hearing from you.\n\nBest regards,\n[Your Name]";
+
+      // 2. Encode the subject and body to handle special characters and spaces
+      const encodedSubject = encodeURIComponent(subject);
+      const encodedBody = encodeURIComponent(body);
+
+      // 3. Construct the full mailto link and trigger it
+      const mailtoLink = `mailto:info.lunagraphics@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+      window.location.href = mailtoLink;
+    }}
+  >
+    Send Us Your CV
+  </Button>
+</div>
       </div>
     </section>
   );

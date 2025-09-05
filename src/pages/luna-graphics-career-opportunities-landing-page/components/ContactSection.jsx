@@ -45,13 +45,13 @@ const ContactSection = () => {
     {
       icon: 'Phone',
       title: 'Call Us',
-      details: ['+254 712 345 678', '+254 733 456 789', 'Mon-Fri: 8:00 AM - 6:00 PM'],
+      details: ['+254 791 159 618', , 'Mon-Fri: 8:00 AM - 6:00 PM'],
       action: 'Call Now'
     },
     {
       icon: 'Mail',
       title: 'Email Us',
-      details: ['careers@lunagraphics.co.ke', 'info@lunagraphics.co.ke', 'We respond within 24 hours'],
+      details: [ 'info.lunagraphics@gmail.com', 'We respond within 24 hours'],
       action: 'Send Email'
     }
   ];
@@ -98,11 +98,11 @@ const ContactSection = () => {
                       iconPosition="right"
                       onClick={() => {
                         if (info.icon === 'Phone') {
-                          window.location.href = 'tel:+254712345678';
+                          window.location.href = 'tel:+254791159618';
                         } else if (info.icon === 'Mail') {
-                          window.location.href = 'mailto:careers@lunagraphics.co.ke';
+                          window.location.href = 'mailto:info.lunagraphics@gmail.com';
                         } else if (info.icon === 'MapPin') {
-                          window.open('https://maps.google.com?q=Kimathi+Street+Nairobi+CBD', '_blank');
+                          window.open('https://share.google/Tak0C3E4Pe2J1DfqS', '_blank');
                         }
                       }}
                     >
