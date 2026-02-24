@@ -12,7 +12,7 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
       icon: "Palette",
       experience: "2-4 years",
       type: "Full-time",
-      deadline: "2028-08-15",
+      deadline: "2026-01-15",
       responsibilities: [
         "Create visual concepts and designs for print materials",
         "Collaborate with clients to understand design requirements",
@@ -30,7 +30,7 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
       icon: "GraduationCap",
       experience: "0-1 years",
       type: "Internship",
-      deadline: "2028-08-10",
+      deadline: "2026-03-15",
       responsibilities: [
         "Assist senior designers with project development",
         "Learn printing processes and quality standards",
@@ -48,7 +48,7 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
       icon: "Phone",
       experience: "1-2 years",
       type: "Full-time",
-      deadline: "2028-08-20",
+      deadline: "2026-01-15",
       responsibilities: [
         "Manage front desk operations and client reception",
         "Handle phone calls and appointment scheduling",
@@ -62,11 +62,11 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
     },
     {
       id: 4,
-      title: "Sales Representative",
+      title: "Sales Rep/Marketer",
       icon: "TrendingUp",
       experience: "2-3 years",
       type: "Full-time",
-      deadline: "2028-08-25",
+      deadline: "2026-03-15",
       responsibilities: [
         "Develop new client relationships and maintain existing ones",
         "Present printing solutions to potential customers",
@@ -84,7 +84,7 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
       icon: "Settings",
       experience: "1-3 years",
       type: "Full-time",
-      deadline: "2028-08-18",
+      deadline: "2026-01-15",
       responsibilities: [
         "Operate and maintain printing equipment",
         "Ensure quality control throughout production",
@@ -98,11 +98,11 @@ const OpenPositionsGrid = ({ onApplyClick }) => {
     },
     {
       id: 6,
-      title: "Digital Marketing Specialist",
+      title: "Technical Support Specialist",
       icon: "Smartphone",
       experience: "2-4 years",
       type: "Full-time",
-      deadline: "2028-08-22",
+      deadline: "2026-01-15",
       responsibilities: [
         "Manage social media accounts and online presence",
         "Create digital marketing campaigns",

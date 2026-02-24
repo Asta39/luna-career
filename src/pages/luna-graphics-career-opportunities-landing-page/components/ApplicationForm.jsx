@@ -20,7 +20,7 @@ const ApplicationForm = ({ selectedPosition, onClose, onSuccess }) => {
     expectedSalary: '',
     availableDate: '',
     cvUrl: '',
-    fullPhotoUrl: '',
+    PhotoUrl: '',
     idPhotoUrl: '',
     agreeTerms: false,
     agreePrivacy: false
@@ -28,8 +28,8 @@ const ApplicationForm = ({ selectedPosition, onClose, onSuccess }) => {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [uploading, setUploading] = useState({ cv: false, fullPhoto: false, idPhoto: false });
-  const [fileNames, setFileNames] = useState({ cv: '', fullPhoto: '', idPhoto: '' });
+  const [uploading, setUploading] = useState({ cv: false, Photo: false, idPhoto: false });
+  const [fileNames, setFileNames] = useState({ cv: '', Photo: '', idPhoto: '' });
 
   useEffect(() => {
     const savedData = localStorage.getItem('lunaGraphicsApplication');
@@ -156,7 +156,6 @@ const ApplicationForm = ({ selectedPosition, onClose, onSuccess }) => {
 
     if (step === 3) {
       if (!formData.cvUrl) newErrors.cv = 'CV/Resume is required';
-      if (!formData.fullPhotoUrl) newErrors.fullPhoto = 'Full photo is required';
       if (!formData.idPhotoUrl) newErrors.idPhoto = 'ID photo is required';
       if (!formData.agreeTerms) newErrors.agreeTerms = 'You must agree to terms and conditions';
       if (!formData.agreePrivacy) newErrors.agreePrivacy = 'You must agree to privacy policy';
@@ -265,16 +264,16 @@ const ApplicationForm = ({ selectedPosition, onClose, onSuccess }) => {
         {errors.cv && <p className="text-red-500 text-sm mt-1">{errors.cv}</p>}
       </div>
       <div>
-        <label className="block text-sm font-medium text-foreground mb-2">Full Photo <span className="text-red-500">*</span></label>
+        <label className="block text-sm font-medium text-foreground mb-2">Photo</label>
         <div className="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary transition-smooth">
-          <input type="file" accept="image/*" onChange={(e) => handleFileChange('fullPhoto', e.target.files[0])} className="hidden" id="full-photo-upload" disabled={uploading.fullPhoto} />
-          <label htmlFor="full-photo-upload" className={uploading.fullPhoto ? 'cursor-not-allowed' : 'cursor-pointer'}>
+          <input type="file" accept="image/*" onChange={(e) => handleFileChange('fullPhoto', e.target.files[0])} className="hidden" id="photo-upload" disabled={uploading.Photo} />
+          <label htmlFor="photo-upload" className={uploading.Photo ? 'cursor-not-allowed' : 'cursor-pointer'}>
             <Icon name="Camera" size={32} color="var(--color-muted-foreground)" className="mx-auto mb-2" />
-            <p className="text-muted-foreground mb-1">{uploading.fullPhoto ? 'Uploading...' : (fileNames.fullPhoto || 'Click to upload full photo')}</p>
+            <p className="text-muted-foreground mb-1">{uploading.Photo ? 'Uploading...' : (fileNames.Photo || 'Click to upload photo')}</p>
             <p className="text-xs text-muted-foreground">JPEG, PNG (Max 5MB)</p>
           </label>
         </div>
-        {errors.fullPhoto && <p className="text-red-500 text-sm mt-1">{errors.fullPhoto}</p>}
+        {errors.Photo && <p className="text-red-500 text-sm mt-1">{errors.Photo}</p>}
       </div>
       <div>
         <label className="block text-sm font-medium text-foreground mb-2">ID Photo <span className="text-red-500">*</span></label>
